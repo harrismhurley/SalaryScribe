@@ -15,8 +15,21 @@ const collectEmployees = function() {
     //check if prompts were canceled
     if (firstName === null || lastName === null || salaryStr === null) {
       break; //exit loop if any prompt was cancelled
+    // Convert salary string to number
+    const salary = parseFloat(salaryStr.replace(/[^\d.-]/g, ''));
+
+    // Check if salary is a valid number
+    if (!isNaN(salary)) {
+      // Create employee object and add it to the array
+      const employee = { firstName, lastName, salary };
+      employees.push(employee);
+    } else {
+      alert("Invalid salary. Please enter a valid number.");
+      }
     }
   }
+
+  return employees;
 }
 
 // Display the average salary
