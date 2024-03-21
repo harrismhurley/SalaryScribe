@@ -21,21 +21,21 @@ N/A
 Usage of this site is designed around the the 'Employee Roster' table. In order to add employees to the table you must press the 'Add Employees' button and enter the necessary information (first name, last name, and salary). Furthermore, If you press ==Command+Option+I== (MacOS) or ==Control+Shift+I== (Windows), the console will appear to either the side or bottom of your window. Important info is logged in the console, info such as the array of employees, the average employee salary, and the info of one random employee. If you wish to reset the table, simply refresh the page.
 
 ## Images
-![First Name User Prompt](images/Scribe_FN.png)
-![Last Name User Prompt](images/Scribe_LN.png)
-![Employee Salary User Prompt](images/Scribe_Sal.png)
-![Add Employee or Cancel User Prompt](images/Scribe_AE.png)
-![Console With Employee Data](images/Scribe_Console.png)
+![First Name User Prompt](Images/Scribe_FN.png)
+![Last Name User Prompt](Images/Scribe_LN.png)
+![Employee Salary User Prompt](Images/Scribe_Sal.png)
+![Add Employee or Cancel User Prompt](Images/Scribe_AE.png)
+![Console With Employee Data](Images/Scribe_Console.png)
 
 ## Credits
 
-[Xandromus](https://github.com/coding-boot-camp/curly-potato/commits?author=Xandromus)
+[Xandromus](https://github.com/coding-boot-camp/curly-potato/commits?author=Xandromus): Provided starter code for this project.
 
-[MDN Web Docs](https://developer.mozilla.org/en-US/)
+[MDN Web Docs](https://developer.mozilla.org/en-US/): Incredably usful docs and all things coding
 
-[ChatGPT](https://chat.openai.com/c/290c33f0-11c4-460e-b422-6ddce4821125)
+[ChatGPT](https://chat.openai.com/c/290c33f0-11c4-460e-b422-6ddce4821125): Y'all know exactly why this is here.
 
-[Bro Code](https://www.youtube.com/watch?v=xR82Jx4pqIc)
+[Bro Code](https://www.youtube.com/watch?v=xR82Jx4pqIc): Tutorial for JavaScript math as well as much more.
 
 ## License
 

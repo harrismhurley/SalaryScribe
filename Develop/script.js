@@ -43,7 +43,7 @@ const displayAverageSalary = function(employeesArray) {
    
   // Check if the employees array is empty
    if (employeesArray.length === 0) {
-    console.log('No employees to select from.');
+    console.log('No employees to compile average from.');
     return;
   }
 
