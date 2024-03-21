@@ -10,13 +10,15 @@ const collectEmployees = function() {
   while (true) {
     const firstName = prompt("Enter employee first name:");
     const lastName = prompt("Enter employee last name:");
-    const salaryStr = prompt("Enter employee first salary:");
+    const salaryStr = prompt("Enter employee salary:");
 
     //check if prompts were canceled
     if (firstName === null || lastName === null || salaryStr === null) {
       break; //exit loop if any prompt was cancelled
+    }
+   
     // Convert salary string to number
-    const salary = parseFloat(salaryStr.replace(/[^\d.-]/g, ''));
+    let salary = parseFloat(salaryStr.replace(/[^\d.-]/g, ''));
 
     // Check if salary is a valid number
     if (!isNaN(salary)) {
@@ -25,7 +27,6 @@ const collectEmployees = function() {
       employees.push(employee);
     } else {
       alert("Invalid salary. Please enter a valid number.");
-      }
     }
   }
 
