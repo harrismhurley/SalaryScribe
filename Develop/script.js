@@ -16,7 +16,7 @@ const collectEmployees = function() {
     if (firstName === null || lastName === null || salaryStr === null) {
       break; //exit loop if any prompt was cancelled
     }
-   
+
     // Convert salary string to number
     let salary = parseFloat(salaryStr.replace(/[^\d.-]/g, ''));
 
@@ -57,7 +57,7 @@ const displayAverageSalary = function(employeesArray) {
   const avgSalary = totalSalary / employeesArray.length;
 
   //log average salary
-  console.log(`The average employee salary is:`, avgSalary.toLocaleString("en-US", {
+  console.log(`The average employee salary between our ${employeesArray.length} employees is:`, avgSalary.toLocaleString("en-US", {
     style: "currency",
     currency: "USD"
   }),'!');
@@ -65,7 +65,8 @@ const displayAverageSalary = function(employeesArray) {
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
-    // Check if the employees array is empty
+    
+  // Check if the employees array is empty
     if (employeesArray.length === 0) {
       console.log('No employees to select from.');
       return;
@@ -82,6 +83,35 @@ const getRandomEmployee = function(employeesArray) {
       style: "currency",
       currency: "USD"
     }));
+  }
+
+  // Sort the employees alphabetically by last name
+  const sortEmployeesByName = function(employeesArray) {
+    return employeesArray.sort(function(a, b) {
+    
+      // Convert last names to lowercase for case-insensitive sorting
+      const lastNameA = a.lastName.toLowerCase();
+      const lastNameB = b.lastName.toLowerCase();
+
+      if (lastNameA < lastNameB) {
+        return -1;
+      }
+      if (lastNameA > lastNameB) {
+        return 1;
+      }
+     
+      // If last names are equal, compare first names
+      const firstNameA = a.firstName.toLowerCase();
+      const firstNameB = b.firstName.toLowerCase();
+      if (firstNameA < firstNameB) {
+        return -1;
+     }
+      if (firstNameA > firstNameB) {
+        return 1;
+     }
+    // If both first and last names are equal
+    return 0; 
+   });
   }
 
 /*
