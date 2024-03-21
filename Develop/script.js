@@ -28,19 +28,44 @@ const collectEmployees = function() {
     } else {
       alert("Invalid salary. Please enter a valid number.");
     }
+    
+    //ask user if they want to add another employee
+    const addAnotherEmployee = confirm("Do you want to add another employee?");
+    if (!addAnotherEmployee) {
+      break; // Exit the loop if the user does not want to add another employee
+    }
   }
-
   return employees;
 }
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
-  // TODO: Calculate and display the average salary
+   
+  // Check if the employees array is empty
+   if (employeesArray.length === 0) {
+    console.log('No employees to select from.');
+    return;
+  }
+
+  //find total salary
+  let totalSalary = 0
+  for (let i = 0; i < employeesArray.length; i++) {
+    totalSalary += employeesArray[i].salary;
+  }
+
+  //calculate avg sal
+  const avgSalary = totalSalary / employeesArray.length;
+
+  //log average salary
+  console.log(`The average employee salary is:`, avgSalary.toLocaleString("en-US", {
+    style: "currency",
+    currency: "USD"
+  }),'!');
 }
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
-  // TODO: Select and display a random employee
+  
 }
 
 /*
